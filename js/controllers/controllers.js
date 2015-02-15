@@ -5,6 +5,8 @@ app.controller('HeaderController', ['$scope', '$route', function ($scope, $route
 }])
 
 app.controller('AssociationController', ['$scope', 'Articles', function ($scope, Articles) {
-    $scope.articles = Articles.get();
-
+    Articles.get().then(function(data){
+    	$scope.articles = data;
+    	console.log(data);
+    })
 }])

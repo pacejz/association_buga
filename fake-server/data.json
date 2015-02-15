@@ -1,0 +1,26 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "authorName": "Pacejz",
+            "title": "Yo Man",
+            "image": "/img/articles/lago.jpg",
+            "date": "15/12/2015",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis iure voluptatibus sed accusantium adipisci aspernatur, odio vero, optio saepe illo porro ab odit in animi veritatis natus impedit cumque? Expedita."
+        }, {
+            "id": 2,
+            "authorName": "ZeZeN",
+            "title": "Yo Woman",
+            "image": "/img/articles/colombia_wc.jpg",
+            "date": "15/12/2015",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus recusandae possimus, a unde autem repellendus sequi explicabo qui quia. At totam soluta, a ex eligendi facilis saepe dolores illo labore!"
+        }, {
+            "id": 3,
+            "authorName": "ZeZeN",
+            "title": "Yo Jesus",
+            "image": "/img/articles/breizh_cola.jpeg",
+            "date": "15/12/2015",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim facere totam perspiciatis quo culpa ab ducimus, libero quisquam eos beatae voluptates ratione sapiente voluptatem alias quos sint officiis possimus temporibus?"
+        }
+    ]
+}
