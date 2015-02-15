@@ -1,0 +1,19 @@
+
+      <div id="article">
+ 
+<h1>Bienvenue sur le site officiel de l'association</h1>
+<p>Le but de cette association est de faire pleins de choses compliquées à expliquer</p>
+<hr/>
+
+<div ng-repeat="article in articles">
+        <h2 class="title">{{article.title}}</h1>
+        <img src={{article.img}} alt="oups"></img>
+        <p class="content">{{article.content}}</p>
+        
+        <p class="authorName">Rédigé par {{article.authorName}}</p>
+        <hr/>
+
+</div>
+
+
+    </div>
