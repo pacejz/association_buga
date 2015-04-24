@@ -8,15 +8,6 @@ body{
     margin: 0px
 
 }
-hr.separator{
-   border: 0;
-    height: 1px;
-    background: #333;
-    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
-    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc);
-    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc);
-    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc);
-}
 
 .menu-toggler{
     position:fixed;
@@ -39,8 +30,7 @@ header {
     width: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-
+    background-color: rgba(255, 255, 255, 0.9);
     /*background: rgb(22, 57, 79);*/
     /*background: rgba(22, 57, 79, 0.9);*/
     z-index: 2;
@@ -89,6 +79,10 @@ header nav ul li.menu-active a {
     /*color: rgb(247, 202, 24);*/
 }
 
+header #logo-header {
+    position: absolute;
+    left: 30px;
+}
 #banner {
     position: relative;
     background: url(../img/flourfield_ban.jpeg) no-repeat center;
@@ -110,6 +104,11 @@ header nav ul li.menu-active a {
     margin:  20px auto;
 }
 
+h1 {
+    margin: 50px 0px;
+
+}
+
 p {
     text-align: justify;
 }
@@ -121,6 +120,12 @@ footer {
     /*background: rgba(34, 49, 63, 0.9);*/
     color: white;
     text-align: center;
+
+}
+
+footer p{
+        text-align: center;
+
 }
 
 footer #footer-content {
@@ -138,17 +143,36 @@ footer #footer-content {
 
 #article p {
     color: rgb(20,20,20);
+    margin: 20px 0px;
+
 }
 
 
 #article img {
-    margin-top: 10px;
+    margin: 30px 0px;
     width: 100%;
     max-height: 500px;
     height: auto;
 }
 
+#article .authorName {
+    font-style: italic;
+    color: #ccc;
+    text-align: right;
+    margin-top:40px;
+}
 
+
+hr.separator{
+   border: 0;
+    height: 1px;
+    background: #aaa;
+    background-image: -webkit-linear-gradient(left, #eee, #aaa, #eee);
+    background-image:    -moz-linear-gradient(left, #eee, #aaa, #eee);
+    background-image:     -ms-linear-gradient(left, #eee, #aaa, #eee);
+    background-image:      -o-linear-gradient(left, #eee, #aaa, #eee);
+    margin: 70px 0px;
+}
 
 @media (max-width: 768px){
     .menu-toggler{
@@ -221,4 +245,10 @@ footer #footer-content {
     #view-content{
         width:90%;
     }
+    header #logo-header {
+    position: relative;
+    left: 0px;
+    /*display: block;*/
+
+}
 }

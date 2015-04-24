@@ -8,9 +8,15 @@
 
 	<div ng-repeat="article in articles.articlesData">
 	        <h2 class="title">{{article.title}}</h1>
-	        <img ng-src="{{article.image}}" alt="oups"></img>
+	        <div class="article_image">
+	        	<img ng-src="{{article.image}}" alt="oups"></img>
+
+	        <div/>
+
 	        <p class="content">{{article.content}}</p>
-	        <p class="authorName">Por : {{article.authorName}}</p>
+	        <p class="authorName">{{article.authorName}}</p>
 	        <hr class="separator"/>
 	</div>
+
+
 </div>

@@ -22,9 +22,10 @@
         <nav>
             <ul>
                 <!-- <li><img src="img/menu_button.svg" alt="banniere" id="imgmenu" height=25px></li> -->
-                <li>
+                <div id="logo-header">
                     <img src="img/logo_without_strap.svg" class="svg" width="60">
-                </li>
+                </div>
+                    
                 <li ng-class="{'menu-active' : $route.current.currentTab == 'association'}"><a href="#/association">Quienes somos</a>
                 </li>
                 <li ng-class="{'menu-active' : $route.current.currentTab == 'project'}"><a href="#/project">Proyectos</a>
@@ -58,7 +59,9 @@
 
     <footer>
         <div id="footer-content">
-            &copy; Pacejz & ZeZeN &copy;
+            <p>
+                &copy; Pacejz & ZeZeN &copy;
+            </p> 
         </div>
     </footer>
 
