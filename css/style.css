@@ -82,6 +82,12 @@ header nav ul li.menu-active a {
 header #logo-header {
     position: absolute;
     left: 30px;
+    top:5px;
+    width:50px;
+    height:60px;
+}
+header #logo-header img{
+    width:100%;
 }
 #banner {
     position: relative;
@@ -174,7 +180,7 @@ hr.separator{
     margin: 70px 0px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 800px){
     .menu-toggler{
         display:block;
     }
@@ -246,9 +252,14 @@ hr.separator{
         width:90%;
     }
     header #logo-header {
-    position: relative;
-    left: 0px;
-    /*display: block;*/
-
-}
+        text-align:center;
+        position: relative;
+        left: 0px;
+        width:100%;
+        /*display: block;*/
+    }
+    header #logo-header img{
+        height:50px;
+        width:auto;
+    }
 }

@@ -19,13 +19,13 @@
         <img src="img/menu_button.svg" class="svg">
     </span>
     <header id="header" ng-controller="HeaderController" toggle-menu>
+        
+        <div id="logo-header">
+                    <img src="img/logo_without_strap.svg" class="svg">
+        </div>
         <nav>
             <ul>
-                <!-- <li><img src="img/menu_button.svg" alt="banniere" id="imgmenu" height=25px></li> -->
-                <div id="logo-header">
-                    <img src="img/logo_without_strap.svg" class="svg" width="60">
-                </div>
-                    
+                <!-- <li><img src="img/menu_button.svg" alt="banniere" id="imgmenu" height=25px></li> -->    
                 <li ng-class="{'menu-active' : $route.current.currentTab == 'association'}"><a href="#/association">Quienes somos</a>
                 </li>
                 <li ng-class="{'menu-active' : $route.current.currentTab == 'project'}"><a href="#/project">Proyectos</a>
@@ -77,13 +77,28 @@
     <script src="js/services/articles.js"></script>
     <script src="js/controllers/controllers.js"></script>
     <script src="js/directives/directives.js"></script>
-    <!-- 
+    
     <script>
+    var a = window.pageYOffset, direction=true;
         window.addEventListener("scroll", function(e) {
-            console.log(e);
+                direction = window.pageYOffset < a;
+                if(direction){
+                    console.log("up")
+                    console.log(document.getElementById("logo-header").height);
+
+                    // document.getElementById("logo-header").style.height = "10px";
+                } else{
+                    console.log("down")
+                    // document.getElementById("logo-header").style.height = "80px";
+
+                }
+
+
+                a = window.pageYOffset;
+                        
         });
     </script>
- -->
+
 </body>
 
 </html>
