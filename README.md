@@ -1,6 +1,7 @@
 Todo LIST
 ========
 
+## Jean seb
 
 * Regler le soucis de la bannière -- done
 
@@ -15,3 +16,9 @@ Todo LIST
 * Dans multimedia récupérer les photos qui sont dans les articles ??
 
 * ajouter un bouton pour scroller tout en haut
+
+
+
+## Benjamin
+
+* nodejs server test ==> plus besoin de php ou wamp ou mamp ou chais pas quoi, maintenant il suffit de se placer à la racine du projet et faire `npm install` && `node server.js` (j'ai changé la route pour les articles et ça marche ! :)

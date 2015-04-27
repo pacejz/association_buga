@@ -1,6 +1,14 @@
-* {
-    box-sizing: border-box;
-    
+*, *:before, *:after {
+    box-sizing: border-box;   
+}
+
+/*for debug...*/
+pre{
+    background: #000;
+    border-radius:5px;
+    border:2px orange solid;
+    color:green;
+    padding:20px;
 }
 
 body{
