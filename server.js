@@ -1,3 +1,5 @@
+
+
 var express = require('express');
 
 ////////////////////
@@ -5,7 +7,7 @@ var express = require('express');
 ////////////////////
 
 var app = express();
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/public/'));
 
 
 //==========================Les routes============================//
@@ -17,7 +19,7 @@ app.get('/', function(res, res){
 
 
 app.get('/articles', function(res, res){
-	res.sendFile('data.json', {"root": __dirname + '/fake-server'});
+	res.sendFile('data.json', {"root": __dirname + '/server'});
 })
 
 
