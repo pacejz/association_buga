@@ -13,14 +13,34 @@ app.use(express.static(__dirname + '/public/'));
 //==========================Les routes============================//
 
 
-app.get('/', function(res, res){
-	res.sendFile('index.html');
+///////////////
+// interface //
+///////////////
+
+// app.get('/', function(res, res){
+// 	res.sendFile('index.html');
+// })
+
+// app.all('/*', function(req, res) { 
+// 	res.sendFile('index.html', {"root": __dirname + '/public'}); 
+// });
+
+app.use(function(req, res) {
+  return res.redirect(req.protocol + '://' + req.get('Host') + '/#' + req.url)
 })
 
 
-app.get('/articles', function(res, res){
+
+
+/////////
+// api //
+/////////
+
+app.get('/api/articles', function(res, res){
 	res.sendFile('data.json', {"root": __dirname + '/server'});
 })
+
+
 
 
 

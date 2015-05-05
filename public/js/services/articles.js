@@ -3,11 +3,10 @@
 app.factory('Articles', ['$http', function ($http) {
     return {
         get: function(){
-            return $http.get('/articles').then(function(res){
+            return $http.get('/api/articles').then(function(res){
             // return $http.get('fake-server/data.json').then(function(res){
                 return res.data;
             })
-
         }
     }
 }])

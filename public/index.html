@@ -7,6 +7,8 @@
     <link rel="icon" href="img/favicon.ico">
     <title>Comunidad Emaus Buga</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <base href="/">
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -26,15 +28,15 @@
         <nav>
             <ul>
                 <!-- <li><img src="img/menu_button.svg" alt="banniere" id="imgmenu" height=25px></li> -->    
-                <li ng-class="{'menu-active' : $route.current.currentTab == 'association'}"><a href="#/association">Quienes somos</a>
+                <li ng-class="{'menu-active' : $route.current.currentTab == 'association'}"><a href="/association">Quienes somos</a>
                 </li>
-                <li ng-class="{'menu-active' : $route.current.currentTab == 'project'}"><a href="#/project">Proyectos</a>
+                <li ng-class="{'menu-active' : $route.current.currentTab == 'project'}"><a href="/project">Proyectos</a>
                 </li>
-                <li ng-class="{'menu-active' : $route.current.currentTab == 'partnership'}"><a href="#/partnership">Prensa</a>
+                <li ng-class="{'menu-active' : $route.current.currentTab == 'partnership'}"><a href="/partnership">Prensa</a>
                 </li>
-                <li ng-class="{'menu-active' : $route.current.currentTab == 'multimedia'}"><a href="#/multimedia">Multimedia</a>
+                <li ng-class="{'menu-active' : $route.current.currentTab == 'multimedia'}"><a href="/multimedia">Multimedia</a>
                 </li>
-                <li ng-class="{'menu-active' : $route.current.currentTab == 'contact'}"><a href="#/contact">Contacto</a>
+                <li ng-class="{'menu-active' : $route.current.currentTab == 'contact'}"><a href="/contact">Contacto</a>
                 </li>
             </ul>
         </nav>
@@ -83,12 +85,12 @@
         window.addEventListener("scroll", function(e) {
                 direction = window.pageYOffset < a;
                 if(direction){
-                    console.log("up")
-                    console.log(document.getElementById("logo-header").height);
+                    // console.log("up")
+                    // console.log(document.getElementById("logo-header").height);
 
                     // document.getElementById("logo-header").style.height = "10px";
                 } else{
-                    console.log("down")
+                    // console.log("down")
                     // document.getElementById("logo-header").style.height = "80px";
 
                 }

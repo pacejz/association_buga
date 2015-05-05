@@ -6,7 +6,7 @@ var app = angular.module('mainApp', ['ngRoute'])
 
 // ASTUCE : j'ajoute "?1" aux urls des templates pour eviter le cache des navigateurs lors du dev... on peut les enlever après
 
-.config( ['$routeProvider', function($routeProvider) {
+.config( ['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 
     $routeProvider
@@ -45,4 +45,8 @@ var app = angular.module('mainApp', ['ngRoute'])
 		redirectTo: '/association'
 	});
 
+
+
+	/*html5mode*/
+	$locationProvider.html5Mode(true);
   }])
