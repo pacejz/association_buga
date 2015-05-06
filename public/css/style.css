@@ -9,6 +9,9 @@ pre{
     border:2px orange solid;
     color:green;
     padding:20px;
+
+    max-height: 500px;
+    overflow:auto;
 }
 
 body{
