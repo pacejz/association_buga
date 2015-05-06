@@ -11,25 +11,7 @@ app.use(express.static(__dirname + '/public/'));
 
 
 //==========================Les routes============================//
-
-
-///////////////
-// interface //
-///////////////
-
-// app.get('/', function(res, res){
-// 	res.sendFile('index.html');
-// })
-
-// app.all('/*', function(req, res) { 
-// 	res.sendFile('index.html', {"root": __dirname + '/public'}); 
-// });
-
-app.use(function(req, res) {
-  return res.redirect(req.protocol + '://' + req.get('Host') + '/#' + req.url)
-})
-
-
+// /!\Warning, The interface route must always be the last one (because it takes care of everything that have not been already routed...) /!\
 
 
 /////////
@@ -42,6 +24,15 @@ app.get('/api/articles', function(res, res){
 
 
 
+
+
+///////////////
+// interface //
+///////////////
+
+app.use(function(req, res) {
+  return res.redirect(req.protocol + '://' + req.get('Host') + '/#' + req.url)
+})
 
 
 
