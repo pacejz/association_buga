@@ -1,6 +1,12 @@
 Todo LIST
 ========
 
+## HOWTO
+
+`npm install && node server`
+
+---
+
 ## Jean seb
 
 * Regler le soucis de la bannière -- done
@@ -22,4 +28,6 @@ Todo LIST
 
 ## Benjamin
 
-* nodejs server test ==> plus besoin de php ou wamp ou mamp ou chais pas quoi, maintenant il suffit de se placer à la racine du projet et faire `npm install` && `node server.js` (j'ai changé la route pour les articles et ça marche ! :)
+* html5mode
+* api (pour le moment je m'amuse juste avec le fichier...)
+* passer le script js du menu vers une une directive angularjs 
