@@ -88,10 +88,7 @@
     <script>
     var a = window.pageYOffset, 
         down_direction=true,
-        menu_items = document.getElementsByClassName("menu-item")
-        set_padding = function(){
-            console.log("coucou")
-        };
+        menu_items = document.getElementsByClassName("menu-item");
         window.addEventListener("scroll", function(e) {
                 down_direction = window.pageYOffset < a;
                 if(down_direction){
