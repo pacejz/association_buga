@@ -30,6 +30,20 @@
                 <!-- <li><img src="img/menu_button.svg" alt="banniere" id="imgmenu" height=25px></li> -->    
                 <li class="menu-item" ng-class="{'menu-active' : $route.current.currentTab == 'association'}">
                     <a href="/association">Quienes somos</a>
+                    <div class="nav-umenu">
+                        <ul>
+                            <li>
+                                <a href="/association/history">Historia del chocolate</a>
+                            </li>
+                            <li>
+                                <a href="/association/organization">Organisacion</a>
+                            </li>
+                            <li>
+                                <a href="/association/work">Ejes de trabajo</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
                 </li>
                 <li class="menu-item" ng-class="{'menu-active' : $route.current.currentTab == 'project'}">
                     <a href="/project">Proyectos</a>
@@ -39,6 +53,17 @@
                 </li>
                 <li class="menu-item" ng-class="{'menu-active' : $route.current.currentTab == 'multimedia'}">
                     <a href="/multimedia">Multimedia</a>
+                    <div class="nav-umenu">
+                        <ul>
+                            <li>
+                                <a href="/multimedia/images">Imagenes</a>
+                            </li>
+                            <li>
+                                <a href="/multimedia/videos">Videos</a>
+                            </li>
+                           
+                        </ul>
+                    </div>
                 </li>
                 <li class="menu-item" ng-class="{'menu-active' : $route.current.currentTab == 'contact'}">
                     <a href="/contact">Contacto</a>

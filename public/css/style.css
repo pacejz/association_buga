@@ -74,9 +74,10 @@ header nav ul li a:visited {
     width: 100%;
     height: 100%;    
     color: rgb(22, 57, 79);
-
     /*color: rgb(228, 241, 254);*/
     text-decoration: none;
+    /*max-width: 180px;*/
+
 }
 
 header nav ul li a:hover {
@@ -85,11 +86,42 @@ header nav ul li a:hover {
         background-color: rgba(255, 255, 255, 0.9);
 }
 
-header nav ul li.menu-active a {
+header nav ul li.menu-active > a {
     color: rgb(219, 109, 37);
     /*color: rgb(247, 202, 24);*/
 }
 
+.nav-umenu {
+    position:absolute;
+    display:none;
+    /*display:block;*/
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    /*max-width: 180px;*/
+
+}
+
+.nav-umenu:hover{
+    display: block;
+}
+
+header nav ul li a:hover ~ .nav-umenu{
+    display:block;    
+}
+
+.nav-umenu ul li {
+    display:block;
+    text-align: center;
+    text-decoration: none;
+    
+}
+.nav-umenu ul li a {
+    color: rgb(22, 57, 79);
+    padding: 10px 30px;
+}
+.nav-umenu ul li a:hover {
+    color: rgb(87, 183, 198);
+}
 header #logo-header {
     position: absolute;
     left: 30px;
