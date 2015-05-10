@@ -13,6 +13,7 @@ var app = angular.module('mainApp', ['ngRoute'])
 	.when('/association', {
 		templateUrl: 'partials/association.html?1',
 		controller: 'AssociationController',
+		controllerAs: 'association',
 		currentTab: 'association'
 	})
 

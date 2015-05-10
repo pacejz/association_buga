@@ -20,15 +20,15 @@
     <span class="menu-toggler" toggle-menu>
         <img src="img/menu_button.svg" class="svg">
     </span>
-    <header id="header" ng-controller="HeaderController" toggle-menu>
+    <header id="header" ng-controller="HeaderController as header" toggle-menu>
         
         <div id="logo-header">
-                    <img src="img/logo_without_strap.svg" class="svg">
+            <img src="img/logo_without_strap.svg" class="svg">
         </div>
         <nav>
             <ul>
                 <!-- <li><img src="img/menu_button.svg" alt="banniere" id="imgmenu" height=25px></li> -->    
-                <li class="menu-item" ng-class="{'menu-active' : $route.current.currentTab == 'association'}">
+                <li class="menu-item" ng-class="{'menu-active' : header.route.current.currentTab == 'association'}">
                     <a href="/association">Quienes somos</a>
                     <div class="nav-umenu">
                         <ul>
@@ -45,13 +45,13 @@
                     </div>
                     
                 </li>
-                <li class="menu-item" ng-class="{'menu-active' : $route.current.currentTab == 'project'}">
+                <li class="menu-item" ng-class="{'menu-active' : header.route.current.currentTab == 'project'}">
                     <a href="/project">Proyectos</a>
                 </li>
-                <li class="menu-item" ng-class="{'menu-active' : $route.current.currentTab == 'partnership'}">
+                <li class="menu-item" ng-class="{'menu-active' :  header.route.current.currentTab == 'partnership'}">
                     <a href="/partnership">Prensa</a>
                 </li>
-                <li class="menu-item" ng-class="{'menu-active' : $route.current.currentTab == 'multimedia'}">
+                <li class="menu-item" ng-class="{'menu-active' :  header.route.current.currentTab == 'multimedia'}">
                     <a href="/multimedia">Multimedia</a>
                     <div class="nav-umenu">
                         <ul>
@@ -65,7 +65,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="menu-item" ng-class="{'menu-active' : $route.current.currentTab == 'contact'}">
+                <li class="menu-item" ng-class="{'menu-active' : header.route.current.currentTab == 'contact'}">
                     <a href="/contact">Contacto</a>
                 </li>
             </ul>
