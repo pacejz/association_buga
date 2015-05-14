@@ -32,7 +32,16 @@ var app = angular.module('mainApp', ['ngRoute'])
 	.when('/multimedia', {
 		templateUrl: 'partials/default.html?1',
 		// controller: 'PartnershipController',
-		currentTab: 'multimedia'
+		currentTab: 'multimedia',
+		currentSubTab: 'videos'
+
+	})
+	.when('/multimedia/images', {
+		templateUrl: 'partials/images.html?1',
+		controller: 'ImagesController',
+		controllerAs: 'images',
+		currentTab: 'multimedia',
+		currentSubTab: 'images'
 	})
 	
 	.when('/contact', {

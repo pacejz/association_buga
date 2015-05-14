@@ -18,23 +18,38 @@ app.use(express.static(__dirname + '/public/'));
 // api //
 /////////
 
-app.get('/api/articles', function(res, res){
+app.get('/api/articles', function(req, res){
 	// res.sendFile('data.json', {"root": __dirname + '/server'});
 	
-	var content,
+	var content, contentSend, index, tmp, initLength,
 		filepath = __dirname + '/server/data.json',
 	//get the data
 		content  = JSON.parse(fs.readFileSync(filepath,'utf8'));
-
+		contentSend = {"articlesData": []};
 	//random article from the articlesData array :)  
 	//(just to be sure I can do something with the data...)
-	var tmp = Math.floor((Math.random() * content.articlesData.length)/* + 1*/);
 
-	content.articlesData = [content.articlesData[tmp]];
+	initLength = content.articlesData.length;
+	for (var index = 0; index <  initLength; index = index + 1) {
+			tmp = Math.floor((Math.random() * content.articlesData.length));
+			console.log(contentSend.articlesData.length);
+			contentSend.articlesData[index] = content.articlesData[tmp];
+			content.articlesData.splice(tmp,1);
+	};
 
-	//send 	
-	res.setHeader('Content-Type', 'application/json');
-	res.end(JSON.stringify(content));
+	// content.articlesData = [content.articlesData[tmp]];
+
+	res.json(contentSend);
+})
+
+app.get('api/images', function(req, res){
+	var content, index, data
+		filepath = __dirname + '/server/data.json',
+		content  = JSON.parse(fs.readFileSync(filepath,'utf8'));
+		// for(index = 0; index < content.articlesData.length; index = index + 1) {
+		// 	data = content.articlesData[index];
+
+		// }
 
 })
 

@@ -1,11 +1,20 @@
-app.controller('HeaderController', ['$route', function ($scope, $route) {
+app.controller('HeaderController', ['$route', function ($route) {
 
     this.route = $route;
+    console.log(this.route);
 }])
 
-app.controller('AssociationController', ['Articles', function (Articles) {
+.controller('AssociationController', ['Articles', function (Articles) {
 	var me = this;
     Articles.get().then(function(data){
     	me.articles = data;
     })
+}])
+
+.controller('ImagesController', ['Articles', function (Articles){
+	var me = this;
+    	Articles.get().then(function(data){
+    		me.articles = data;
+   	 	})
+
 }])

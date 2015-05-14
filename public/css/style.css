@@ -211,7 +211,13 @@ footer #footer-content {
     margin-top:40px;
 }
 
+#images img{
+    margin: 30px 0px;
+    width: 30%;
+    max-height: 200px;
+    height: auto;
 
+}
 hr.separator{
    border: 0;
     height: 1px;

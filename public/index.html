@@ -33,13 +33,13 @@
                     <div class="nav-umenu">
                         <ul>
                             <li>
-                                <a href="/association/history">Historia del chocolate</a>
+                                <a href="/association/history" ng-class="{'menu-active' : header.route.current.currentTab == 'association/history'}"}>Historia del chocolate</a>
                             </li>
                             <li>
-                                <a href="/association/organization">Organisacion</a>
+                                <a href="/association/organization" ng-class="{'menu-active' : header.route.current.currentTab == 'association/organisation'}"}>Organisacion</a>
                             </li>
                             <li>
-                                <a href="/association/work">Ejes de trabajo</a>
+                                <a href="/association/work" ng-class="{'menu-active' : header.route.current.currentTab == 'association/work'}"}>Ejes de trabajo</a>
                             </li>
                         </ul>
                     </div>
@@ -56,10 +56,10 @@
                     <div class="nav-umenu">
                         <ul>
                             <li>
-                                <a href="/multimedia/images">Imagenes</a>
+                                <a href="/multimedia/images" ng-class="{'menu-active' : header.route.current.currentSubTab == 'images'}">Imagenes</a>
                             </li>
                             <li>
-                                <a href="/multimedia/videos">Videos</a>
+                                <a href="/multimedia/videos" ng-class="{'menu-active' : header.route.current.currentSubTab == 'videos'}">Videos</a>
                             </li>
                            
                         </ul>
