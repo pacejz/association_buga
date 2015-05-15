@@ -18,40 +18,62 @@ app.use(express.static(__dirname + '/public/'));
 // api //
 /////////
 
-app.get('/api/articles', function(req, res){
-	// res.sendFile('data.json', {"root": __dirname + '/server'});
+
+// app.get('/api/articles', function(req, res){
+// 	// res.sendFile('data.json', {"root": __dirname + '/server'});
 	
-	var content, contentSend, index, tmp, initLength,
-		filepath = __dirname + '/server/data.json',
-	//get the data
-		content  = JSON.parse(fs.readFileSync(filepath,'utf8'));
-		contentSend = {"articlesData": []};
-	//random article from the articlesData array :)  
-	//(just to be sure I can do something with the data...)
+// 	var content, contentSend, index, tmp, initLength,
+// 		filepath = __dirname + '/server/data.json',
+// 		content  = JSON.parse(fs.readFileSync(filepath,'utf8')), //get the data
+// 		contentSend = {"articlesData": []};
 
-	initLength = content.articlesData.length;
-	for (var index = 0; index <  initLength; index = index + 1) {
-			tmp = Math.floor((Math.random() * content.articlesData.length));
-			console.log(contentSend.articlesData.length);
-			contentSend.articlesData[index] = content.articlesData[tmp];
-			content.articlesData.splice(tmp,1);
-	};
+// 	initLength = content.articlesData.length;
 
-	// content.articlesData = [content.articlesData[tmp]];
+// 	for (var index = 0; index <  initLength; index = index + 1) {
+// 			tmp = Math.floor((Math.random() * content.articlesData.length));
+// 			contentSend.articlesData[index] = content.articlesData[tmp];
+// 			content.articlesData.splice(tmp,1);
+// 	};
+
+// 	res.json(contentSend);
+// });
+
+
+//get all articles
+app.get('/api/articles', function(req, res){
+	
+	var filepath = __dirname + '/server/data.json',
+		content  = JSON.parse(fs.readFileSync(filepath,'utf8')), //get the data
+		contentSend = content;
 
 	res.json(contentSend);
-})
+});
+
+// articles per pages ... 
+app.get('/api/articles/:page', function(req, res){
+	
+	var perPages = 2,
+		filepath = __dirname + '/server/data.json',
+		content  = JSON.parse(fs.readFileSync(filepath,'utf8')), //get the data
+		page = req.params.page*perPages,
+		contentSend = {"articlesData": content.articlesData.splice(page, perPages)};
+
+	res.json(contentSend);
+});
+
+
+
+
 
 app.get('api/images', function(req, res){
 	var content, index, data
 		filepath = __dirname + '/server/data.json',
 		content  = JSON.parse(fs.readFileSync(filepath,'utf8'));
-		// for(index = 0; index < content.articlesData.length; index = index + 1) {
-		// 	data = content.articlesData[index];
-
-		// }
-
 })
+
+
+
+
 
 
 
