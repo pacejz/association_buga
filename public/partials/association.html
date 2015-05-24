@@ -1,30 +1,24 @@
-<div id="article" scroll-call="association.getArticles(association.currentPage)"> 
+<div id="association"> 
 	
-	<h1>Bienvenido en el sitio oficial de la comunidad</h1>
+	<h1>Communidad Emaús Guadalajara de Buga</h1>
 	<p>
-		En ese sitio, tenemos el motivo de informarles sobre todos los proyectos y enventos en los que nuestra communidad
-		se dedica.
+		La Comunidad Guadalajara de Buga, está ubicada en el Municipio de Yotoco,  corregimiento Media Canoa, vereda PicaPiedra.
+ Legalmente constituida e inscrita en la Cámara de Comercio de la misma ciudad bajo el No. 2847 del  5 de junio de 2009, identificada con el NIT. 900.293.695-1. Con naturaleza jurídica como organización social no gubernamental sin ánimo de lucro, actúa regida por las disposiciones generales de EMAUS INTERNACIONAL  armonizada con la Constitución y las Leyes Colombianas y en forma específica regida por los Estatutos registrados en la Cámara de Comercio de Guadalajara de Buga.
+
 	</p>
+	<p>	Más informaciones sobre la associación en los enlaces siguientes</p>
+	<ul>
+		<li><a href="/association/history">Historia de Emaús</a></li>
+		<li><a href="/association/organization">Organisación</a></li>
+		<li><a href="/association/work">Ejes de trabajo</a></li>
+	</ul>
 
 
 
-	<!-- <pre>{{association.articles |json:1}}</pre> -->
 
 
 	
-	<hr class="separator"/>
-
-	<div ng-repeat="article in association.articles">
-	        <h2 class="title">#{{article.id}} {{article.title}}</h1>
-	        <div class="article_image">
-	        	<img ng-src="{{article.image}}" alt="oups"></img>
-
-	        <div/>
-
-	        <p class="content">{{article.content}}</p>
-	        <p class="authorName">{{article.authorName}}</p>
-	        <hr class="separator"/>
-	</div>
+	
 
 
 </div>

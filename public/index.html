@@ -16,6 +16,9 @@
 
 <body>
 
+
+
+
     <!--  ================================ DEBUT CONTENU  ================================ -->
     <span class="menu-toggler" toggle-menu>
         <img src="img/menu_button.svg" class="svg">
@@ -23,17 +26,20 @@
     <header id="header" ng-controller="HeaderController as header" toggle-menu>
         
         <div id="logo-header">
-            <img src="img/logo_without_strap.svg" class="svg">
+            <img src="img/logo.svg" class="svg">
         </div>
         <nav>
             <ul>
-                <!-- <li><img src="img/menu_button.svg" alt="banniere" id="imgmenu" height=25px></li> -->    
+                <!-- <li><img src="img/menu_button.svg" alt="banniere" id="imgmenu" height=25px></li> -->   
+                <li class="menu-item" ng-class="{'menu-active' :  header.route.current.currentTab == 'news'}">
+                    <a href="/news">Actualidad</a>
+                </li> 
                 <li class="menu-item" ng-class="{'menu-active' : header.route.current.currentTab == 'association'}">
                     <a href="/association">Quienes somos</a>
                     <div class="nav-umenu">
                         <ul>
                             <li>
-                                <a href="/association/history" ng-class="{'menu-active' : header.route.current.currentTab == 'association/history'}"}>Historia del chocolate</a>
+                                <a href="/association/history" ng-class="{'menu-active' : header.route.current.currentTab == 'association/history'}"}>Historia</a>
                             </li>
                             <li>
                                 <a href="/association/organization" ng-class="{'menu-active' : header.route.current.currentTab == 'association/organisation'}"}>Organisacion</a>
@@ -47,9 +53,6 @@
                 </li>
                 <li class="menu-item" ng-class="{'menu-active' : header.route.current.currentTab == 'project'}">
                     <a href="/project">Proyectos</a>
-                </li>
-                <li class="menu-item" ng-class="{'menu-active' :  header.route.current.currentTab == 'partnership'}">
-                    <a href="/partnership">Prensa</a>
                 </li>
                 <li class="menu-item" ng-class="{'menu-active' :  header.route.current.currentTab == 'multimedia'}">
                     <a href="/multimedia">Multimedia</a>
@@ -76,7 +79,7 @@
 
     <div id="banner">
         <div id="logo">
-            <img src="img/logo.svg" class="svg" width="200">
+            <img src="img/logo_without_strap.svg" class="svg" width="100">
         </div>
     </div>
 
@@ -116,13 +119,14 @@
         menu_items = document.getElementsByClassName("menu-item");
         
         window.addEventListener("scroll", function(e) {
-                down_direction = window.pageYOffset < a;
+                down_direction = window.pageYOffset < a || window.pageYOffset <= 0;
                 if(down_direction){
-                    for(var i=0; i<menu_items.length; i++){
-                        menu_items[i].getElementsByTagName("a")[0].style.padding = "30px 30px";
+                    var i;
+                    for(i=0; i<menu_items.length; i++){
+                        menu_items[i].getElementsByTagName("a")[0].style.padding = "45px 30px";
                     }
                 } else{
-                    for(var i=0; i<menu_items.length; i++){
+                    for(i=0; i<menu_items.length; i++){
                         menu_items[i].getElementsByTagName("a")[0].style.padding = "10px 30px";
                     }
                 }

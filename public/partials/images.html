@@ -1,13 +1,11 @@
 <div id="images"> 
 
-	
-	<div ng-repeat="image in images.articles.articlesData">
+	<h1>Imagenes</h1>
+	<div class="multimedia_image" ng-repeat="image in images.articles.articlesData">
 
-	        <div class="multimedia_image">
 	        	<img ng-src="{{image.image}}" alt="oups"></img>
+				<span class="title">{{image.title}}</span>
 
-	        <div/>
-			<span class="title">{{image.title}}</span>
 
 	      
 	</div>

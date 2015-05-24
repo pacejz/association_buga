@@ -10,27 +10,56 @@ var app = angular.module('mainApp', ['ngRoute'])
 
 
     $routeProvider
-	.when('/association', {
-		templateUrl: 'partials/association.html?1',
+    .when('/', {
+		redirectTo: '/news'
+	})
+    .when('/news', {
+		templateUrl: 'partials/news.html?1',
 		controller: 'AssociationController',
 		controllerAs: 'association',
+		currentTab: 'news'
+	})
+
+	.when('/association', {
+		templateUrl: 'partials/association.html?1',
+		// controller: 'AssociationController',
+		// controllerAs: 'association',
 		currentTab: 'association'
 	})
 
+	.when('/association/history',{
+		templateUrl: 'partials/history.html?1',
+		currentTab: 'association',
+		currentSubTab: 'history'
+	})
+
+	.when('/association/organization',{
+		templateUrl: 'partials/organization.html?1',
+		currentTab: 'association',
+		currentSubTab: 'organization'
+	})
+
+	.when('/association/work',{
+		templateUrl: 'partials/work.html?1',
+		currentTab: 'association',
+		currentSubTab: 'work'
+
+	})
+
 	.when('/project', {
-		templateUrl: 'partials/default.html?1',
-		// controller: 'ProjectController',
+		templateUrl: 'partials/project.html?1',
 		currentTab: 'project'
 	})
 
-	.when('/partnership', {
-		templateUrl: 'partials/default.html?1',
-		// controller: 'PartnershipController',
-		currentTab: 'partnership'
+	.when('/news', {
+		templateUrl: 'partials/news.html?1',
+		controller: 'AssociationController',
+		controllerAs: 'association',
+		currentTab: 'news'
 	})
 	
 	.when('/multimedia', {
-		templateUrl: 'partials/default.html?1',
+		templateUrl: 'partials/multimedia.html?1',
 		// controller: 'PartnershipController',
 		currentTab: 'multimedia',
 		currentSubTab: 'videos'
@@ -43,16 +72,23 @@ var app = angular.module('mainApp', ['ngRoute'])
 		currentTab: 'multimedia',
 		currentSubTab: 'images'
 	})
-	
+	.when('/multimedia/videos', {
+		templateUrl: 'partials/videos.html?1',
+		currentTab: 'multimedia',
+		currentSubTab: 'images'
+
+	})
+
 	.when('/contact', {
-		templateUrl: 'partials/default.html?1',
+		templateUrl: 'partials/contact.html?1',
 		// controller: 'PartnershipController',
 		currentTab: 'contact'
 	})
 
 
 	.otherwise({
-		redirectTo: '/association'
+		templateUrl: 'partials/default.html?1',
+		// redirectTo: '/news'
 	});
 
 
