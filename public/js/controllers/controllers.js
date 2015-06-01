@@ -1,11 +1,12 @@
-app.controller('HeaderController', ['$route', function ($route) {
+function HeaderController($route){
 
-    this.route = $route;
-}])
+	this.route = $route;
+}
 
-.controller('AssociationController', ['Articles', function (Articles) {
-	var me = this,
-		loading = false;
+function AssociationController(Articles){
+
+	var me = this
+		,loading = false;
 
 	me.articles = [];
 	me.currentpage = 0;
@@ -28,14 +29,13 @@ app.controller('HeaderController', ['$route', function ($route) {
 			})
 		}
 	};
-
 	me.getArticles();
-    
-}])
+}
 
-.controller('ImagesController', ['Articles', function (Articles){
+function ImagesController(Articles){
+
 	var me = this;
-    	Articles.get().then(function(data){
-    		me.articles = data;
-   	 	})
-}])
+	Articles.get().then(function(data){
+		me.articles = data;
+	})
+}

@@ -1,6 +1,8 @@
-//Appel des models, pour l'insant les modeles sont direct dans les factory
+//Appel des models, pour l'insant les modeles sont dans les factory
 
-app.factory('Articles', ['$http', function ($http) {
+
+function Articles($http){
+
     return {
         get: function(){
             return $http.get('/api/articles').then(function(res){
@@ -13,4 +15,5 @@ app.factory('Articles', ['$http', function ($http) {
             })
         }
     }
-}])
+}
+

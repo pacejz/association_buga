@@ -1,4 +1,5 @@
-app.directive('toggleMenu', function(){
+function toggleMenu(){
+
 	return{
 		restrict: 'A', // je restreint la directive aux atributs
 		link: function(scope, element){
@@ -7,10 +8,10 @@ app.directive('toggleMenu', function(){
 			}) // le reste se fait dans le css
 		}
 	}
-})
+}
 
+function scrollCall($window, $q){
 
-.directive('scrollCall', function($window, $q) {
 	return {
 		link: function(scope, element, attrs) {
 			var offset, scrolling;
@@ -23,14 +24,14 @@ app.directive('toggleMenu', function(){
 			});
 		}
 	};
-})
+}
 
+function scrollOnMenu($window){
 
-.directive('scrollOnMenu', function($window) {
 	return {
 		restrict: 'A',
 		link:function(scope, element, attrs){
-			
+			// console.log(element.find('.menu-item'));
 			var a = $window.pageYOffset;
 			var menu_items = document.getElementsByClassName("menu-item");
 
@@ -52,9 +53,10 @@ app.directive('toggleMenu', function(){
                 a = window.pageYOffset;
 
 			});
-		
-			}
- 
 		}
-	
-});
+	}
+}
+
+
+
+		
