@@ -21,7 +21,7 @@
     <span class="menu-toggler" toggle-menu>
         <img src="img/menu_button.svg" class="svg">
     </span>
-    <header id="header" ng-controller="HeaderController as header" toggle-menu scroll-on-menu>
+    <header id="header" ng-controller="HeaderController as header" toggle-menu>
         
         <div id="logo-header">
             <img src="img/logo.svg" class="svg">
@@ -30,30 +30,30 @@
             <ul>
                 <!-- <li><img src="img/menu_button.svg" alt="banniere" id="imgmenu" height=25px></li> -->   
                 <li class="menu-item" ng-class="{'menu-active' :  header.route.current.currentTab == 'news'}">
-                    <a href="/news">Actualidad</a>
+                    <a href="/news" scroll-on-menu>Actualidad</a>
                 </li> 
                 <li class="menu-item" ng-class="{'menu-active' : header.route.current.currentTab == 'association'}">
-                    <a href="/association">Quienes somos</a>
+                    <a href="/association" scroll-on-menu>Quienes somos</a>
                     <div class="nav-umenu">
                         <ul>
                             <li>
-                                <a href="/association/history" ng-class="{'menu-active' : header.route.current.currentTab == 'association/history'}"}>Historia</a>
+                                <a href="/association/history" ng-class="{'menu-active' : header.route.current.currentTab == 'association/history'}"} >Historia</a>
                             </li>
                             <li>
-                                <a href="/association/organization" ng-class="{'menu-active' : header.route.current.currentTab == 'association/organisation'}"}>Organisacion</a>
+                                <a href="/association/organization" ng-class="{'menu-active' : header.route.current.currentTab == 'association/organisation'}"} >Organisacion</a>
                             </li>
                             <li>
-                                <a href="/association/work" ng-class="{'menu-active' : header.route.current.currentTab == 'association/work'}"}>Ejes de trabajo</a>
+                                <a href="/association/work" ng-class="{'menu-active' : header.route.current.currentTab == 'association/work'}"} >Ejes de trabajo</a>
                             </li>
                         </ul>
                     </div>
                     
                 </li>
                 <li class="menu-item" ng-class="{'menu-active' : header.route.current.currentTab == 'project'}">
-                    <a href="/project">Proyectos</a>
+                    <a href="/project" scroll-on-menu>Proyectos</a>
                 </li>
                 <li class="menu-item" ng-class="{'menu-active' :  header.route.current.currentTab == 'multimedia'}">
-                    <a href="/multimedia">Multimedia</a>
+                    <a href="/multimedia" scroll-on-menu>Multimedia</a>
                     <div class="nav-umenu">
                         <ul>
                             <li>
@@ -67,7 +67,7 @@
                     </div>
                 </li>
                 <li class="menu-item" ng-class="{'menu-active' : header.route.current.currentTab == 'contact'}">
-                    <a href="/contact">Contacto</a>
+                    <a href="/contact" scroll-on-menu>Contacto</a>
                 </li>
             </ul>
         </nav>

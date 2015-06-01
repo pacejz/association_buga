@@ -38,17 +38,11 @@ function scrollOnMenu($window){
 			$window.addEventListener("scroll", function(e) {
                	up_direction = window.pageYOffset < a || window.pageYOffset <= 0;
             	var i;
-
 				if(up_direction){
-
-                    for(i=0; i<menu_items.length; i++){
-                        menu_items[i].getElementsByTagName("a")[0].style.padding = "45px 30px";
-                    }
+					element[0].style.padding = "45px 30px";
+                 
                 } else{
-
-                    for(i=0; i<menu_items.length; i++){
-                        menu_items[i].getElementsByTagName("a")[0].style.padding = "10px 30px";
-                    }
+					element[0].style.padding = "10px 30px";
                 }
                 a = window.pageYOffset;
 
