@@ -23,7 +23,7 @@
     <span class="menu-toggler" toggle-menu>
         <img src="img/menu_button.svg" class="svg">
     </span>
-    <header id="header" ng-controller="HeaderController as header" toggle-menu>
+    <header id="header" ng-controller="HeaderController as header" toggle-menu scroll-on-menu>
         
         <div id="logo-header">
             <img src="img/logo.svg" class="svg">
@@ -113,27 +113,7 @@
     <script src="js/controllers/controllers.js"></script>
     <script src="js/directives/directives.js"></script>
     
-    <script>
-    var a = window.pageYOffset, 
-        down_direction=true,
-        menu_items = document.getElementsByClassName("menu-item");
-        
-        window.addEventListener("scroll", function(e) {
-                down_direction = window.pageYOffset < a || window.pageYOffset <= 0;
-                if(down_direction){
-                    var i;
-                    for(i=0; i<menu_items.length; i++){
-                        menu_items[i].getElementsByTagName("a")[0].style.padding = "45px 30px";
-                    }
-                } else{
-                    for(i=0; i<menu_items.length; i++){
-                        menu_items[i].getElementsByTagName("a")[0].style.padding = "10px 30px";
-                    }
-                }
-
-                a = window.pageYOffset;
-        });
-    </script>
+ 
 
 </body>
 

@@ -3,7 +3,7 @@ app.directive('toggleMenu', function(){
 		restrict: 'A', // je restreint la directive aux atributs
 		link: function(scope, element){
 			element.on("click", function(){ //au click sur les elements qui portent cet attribu (toggle-menu)
-				angular.element(document.getElementById('header')).toggleClass("menu-visible") // je toggle la class
+				angular.element(document.getElementById('header')).toggleClass("menu-visible"); // je toggle la class
 			}) // le reste se fait dans le css
 		}
 	}
@@ -23,4 +23,38 @@ app.directive('toggleMenu', function(){
 			});
 		}
 	};
+})
+
+
+.directive('scrollOnMenu', function($window) {
+	return {
+		restrict: 'A',
+		link:function(scope, element, attrs){
+			
+			var a = $window.pageYOffset;
+			var menu_items = document.getElementsByClassName("menu-item");
+
+			$window.addEventListener("scroll", function(e) {
+               	up_direction = window.pageYOffset < a || window.pageYOffset <= 0;
+            	var i;
+
+				if(up_direction){
+
+                    for(i=0; i<menu_items.length; i++){
+                        menu_items[i].getElementsByTagName("a")[0].style.padding = "45px 30px";
+                    }
+                } else{
+
+                    for(i=0; i<menu_items.length; i++){
+                        menu_items[i].getElementsByTagName("a")[0].style.padding = "10px 30px";
+                    }
+                }
+                a = window.pageYOffset;
+
+			});
+		
+			}
+ 
+		}
+	
 });
