@@ -1,6 +1,7 @@
-function ConfigRoute($routeProvider, $locationProvider){
-	// ASTUCE : j'ajoute "?1" aux urls des templates pour eviter le cache des navigateurs lors du dev... on peut les enlever après
+module.exports = function ($routeProvider, $locationProvider){
+	'use strict';
 
+	// ASTUCE : j'ajoute "?1" aux urls des templates pour eviter le cache des navigateurs lors du dev... on peut les enlever après
 	$routeProvider
 	    .when('/', {
 			redirectTo: '/news'
@@ -73,4 +74,5 @@ function ConfigRoute($routeProvider, $locationProvider){
 		});
 		/*html5mode*/
 		$locationProvider.html5Mode(true);
-}
+
+};

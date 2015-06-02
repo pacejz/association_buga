@@ -1,7 +1,6 @@
-//Appel des models, pour l'insant les modeles sont dans les factory
-
-
-function Articles($http){
+// Appel des models, pour l'insant les modeles sont dans les factory
+module.exports = function ($http){
+    'use strict';
 
     return {
         get: function(){
@@ -15,5 +14,4 @@ function Articles($http){
             })
         }
     }
-}
-
+};

@@ -4,20 +4,25 @@
 
 (function(){
 
+	'use strict';
+
+	var Directives = require('./directives/directives');
+	var ConfigRoute = require('./routes/config');
+	var Articles = require('./services/articles');
+	var Controllers = require('./controllers/controllers');
+
 	angular.module('mainApp', ['ngRoute'])
 
 		.config(['$routeProvider', '$locationProvider', ConfigRoute])
 
 		.factory('Articles', ['$http', Articles])
 
-		.directive('toggleMenu', toggleMenu)
-		.directive('scrollCall', scrollCall)
-		.directive('scrollOnMenu', scrollOnMenu)
+		.directive('toggleMenu', Directives.toggleMenu)
+		.directive('scrollCall', Directives.scrollCall)
+		.directive('scrollOnMenu', Directives.scrollOnMenu)
 
-		.controller('HeaderController', ['$route', HeaderController])
-		.controller('AssociationController', ['Articles', AssociationController])
-		.controller('ImagesController', ['Articles', ImagesController]);
+		.controller('HeaderController', ['$route', Controllers.HeaderController])
+		.controller('AssociationController', ['Articles', Controllers.AssociationController])
+		.controller('ImagesController', ['Articles', Controllers.ImagesController]);
 
 })();
-
-

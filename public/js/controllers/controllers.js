@@ -1,41 +1,47 @@
-function HeaderController($route){
+module.exports = {
 
-	this.route = $route;
-}
+	HeaderController: function($route){
+		'use strict';
 
-function AssociationController(Articles){
+		this.route = $route;
+	},
 
-	var me = this
-		,loading = false;
+	AssociationController: function(Articles){
+		'use strict';
 
-	me.articles = [];
-	me.currentpage = 0;
+		var me = this
+			,loading = false;
 
-	me.getArticles = function(){
-		if(loading === false){
-			loading = true;
-			Articles.getpage(me.currentpage).then(function(data){
-				if(data.length > 0){
-					for(var i=0; i<data.length; i++){
-			    		me.articles.push(data[i]);
+		me.articles = [];
+		me.currentpage = 0;
+
+		me.getArticles = function(){
+			if(loading === false){
+				loading = true;
+				Articles.getpage(me.currentpage).then(function(data){
+					if(data.length > 0){
+						for(var i=0; i<data.length; i++){
+				    		me.articles.push(data[i]);
+						}
+				    	me.currentpage++;
 					}
-			    	me.currentpage++;
-				}
-				else{
-					alert("no more articles :)")
-				}
-		    	loading = false;
-		    	console.log(me.currentpage)
-			})
-		}
-	};
-	me.getArticles();
-}
+					else{
+						alert("no more articles :)")
+					}
+			    	loading = false;
+			    	console.log(me.currentpage)
+				})
+			}
+		};
+		me.getArticles();
+	},
 
-function ImagesController(Articles){
+	ImagesController: function(Articles){
+		'use strict';
 
-	var me = this;
-	Articles.get().then(function(data){
-		me.articles = data;
-	})
+		var me = this;
+		Articles.get().then(function(data){
+			me.articles = data;
+		})
+	}
 }
