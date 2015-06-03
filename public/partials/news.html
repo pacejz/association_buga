@@ -1,4 +1,4 @@
-<div id="article" scroll-call="association.getArticles(association.currentPage)"> 
+<div id="articles" scroll-call="association.getArticles(association.currentPage)"> 
 	
 	<h1>Emaus Guadalajara de Buga</h1>
 	<p>
@@ -8,18 +8,36 @@
 
 	<!-- <pre>{{association.articles |json:1}}</pre> -->
 	
-	<hr class="separator"/>
+	<hr class="separator">
 
-	<div ng-repeat="article in association.articles">
+	<div class="article" ng-repeat="article in association.articles">
 	        <h2 class="title">#{{article.id}} {{article.title}}</h1>
-	        <div class="article_image" >
-	        	<img ng-src="{{article.image}}" alt="oups"></img>
 
-	        </div><!--
-	        --><div class="article_content" >
+			<div class="z-grid">
+				<div class="z-2">
+					<div class="article_image z-box">
+						<img ng-src="{{article.image}}" alt="oups"></img>
+					</div>
+				</div>
+				<div class="z-2">
+					<div class="article_content z-box">
+						<p class="content">{{article.content}}</p>
+		        <p class="authorName">{{article.authorName}}</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- 
+	        <div class="article_image">
+	        	<img ng-src="{{article.image}}" alt="oups"></img>
+	        </div>
+	        <div class="article_content">
 		        <p class="content">{{article.content}}</p>
 		        <p class="authorName">{{article.authorName}}</p>
-			</div>
+			</div> 
+			-->
+
+
 	        <hr class="separator"/>
 	</div>
 

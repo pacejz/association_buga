@@ -1,14 +1,25 @@
 <div id="images"> 
 
 	<h1>Imagenes</h1>
-	<div class="multimedia_image" ng-repeat="image in images.articles.articlesData">
+	
+	<div class="z-grid">
+		<div class="z-3" ng-repeat="image in images.articles.articlesData">
+			<div class="z-box multimedia_image">
 
-	        	<img ng-src="{{image.image}}" alt="oups"></img>
-				<span class="title">{{image.title}}</span>
+				<img src="{{image.image}}" alt="oups">
+				<p>{{image.title}}</p>
 
-
-	      
+			</div>
+		</div>
 	</div>
 
+
+
+	<!-- 
+	<div class="multimedia_image" ng-repeat="image in images.articles.articlesData">
+    	<img ng-src="{{image.image}}" alt="oups"></img>
+		<span class="title">{{image.title}}</span>
+	</div> 
+	-->
 
 </div>

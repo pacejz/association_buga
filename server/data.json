@@ -8,14 +8,16 @@
             "date": "15/12/2015",
             "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis iure voluptatibus sed accusantium adipisci aspernatur, odio vero, optio saepe illo porro ab odit in animi veritatis natus impedit cumque? Expedita."
 
-        }, {
+        }, 
+        {
             "id": 2,
             "authorName": "ZeZeN",
             "title": "Evento 2",
             "image": "/img/articles/tools.jpg",
             "date": "15/12/2015",
             "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus recusandae possimus, a unde autem repellendus sequi explicabo qui quia. At totam soluta, a ex eligendi facilis saepe dolores illo labore!"
-        }, {
+        }, 
+        {
             "id": 3,
             "authorName": "ZeZeN",
             "title": "Evento 3",
@@ -31,14 +33,16 @@
             "date": "15/12/2015",
             "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis iure voluptatibus sed accusantium adipisci aspernatur, odio vero, optio saepe illo porro ab odit in animi veritatis natus impedit cumque? Expedita."
 
-        }, {
+        }, 
+        {
             "id": 5,
             "authorName": "ZeZeN",
             "title": "Evento 2",
             "image": "/img/articles/tools.jpg",
             "date": "15/12/2015",
             "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus recusandae possimus, a unde autem repellendus sequi explicabo qui quia. At totam soluta, a ex eligendi facilis saepe dolores illo labore!"
-        }, {
+        }, 
+        {
             "id": 6,
             "authorName": "ZeZeN",
             "title": "Evento 3",
@@ -54,14 +58,16 @@
             "date": "15/12/2015",
             "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis iure voluptatibus sed accusantium adipisci aspernatur, odio vero, optio saepe illo porro ab odit in animi veritatis natus impedit cumque? Expedita."
 
-        }, {
+        }, 
+        {
             "id": 8,
             "authorName": "ZeZeN",
             "title": "Evento 2",
             "image": "/img/articles/tools.jpg",
             "date": "15/12/2015",
             "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus recusandae possimus, a unde autem repellendus sequi explicabo qui quia. At totam soluta, a ex eligendi facilis saepe dolores illo labore!"
-        }, {
+        }, 
+        {
             "id": 9,
             "authorName": "ZeZeN",
             "title": "Evento 3",

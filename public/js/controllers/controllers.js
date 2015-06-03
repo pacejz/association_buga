@@ -5,37 +5,35 @@ function HeaderController($route){
 
 function AssociationController(Articles){
 
-	var me = this
-		,loading = false;
+	var self = this,
+		loading = false;
 
-	me.articles = [];
-	me.currentpage = 0;
+	self.articles = [];
+	self.currentpage = 0;
 
-	me.getArticles = function(){
+	self.getArticles = function(){
 		if(loading === false){
 			loading = true;
-			Articles.getpage(me.currentpage).then(function(data){
+			Articles.getpage(self.currentpage).then(function(data){
 				if(data.length > 0){
 					for(var i=0; i<data.length; i++){
-			    		me.articles.push(data[i]);
+			    		self.articles.push(data[i]);
 					}
-			    	me.currentpage++;
+			    	self.currentpage++;
 				}
-				else{
-					alert("no more articles :)")
-				}
+				
 		    	loading = false;
-		    	console.log(me.currentpage)
-			})
+		    	// console.log(self.currentpage);
+			});
 		}
 	};
-	me.getArticles();
+	self.getArticles();
 }
 
 function ImagesController(Articles){
 
-	var me = this;
+	var self = this;
 	Articles.get().then(function(data){
-		me.articles = data;
-	})
+		self.articles = data;
+	});
 }

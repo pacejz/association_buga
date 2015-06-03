@@ -1,3 +1,8 @@
+
+/**
+ * Show/hide menu (mobile devices)
+ * @return {[type]} [description]
+ */
 function toggleMenu(){
 
 	return{
@@ -5,19 +10,23 @@ function toggleMenu(){
 		link: function(scope, element){
 			element.on("click", function(){ //au click sur les elements qui portent cet attribu (toggle-menu)
 				angular.element(document.getElementById('header')).toggleClass("menu-visible"); // je toggle la class
-			}) // le reste se fait dans le css
+			}); // le reste se fait dans le css
 		}
-	}
+	};
 }
 
-function scrollCall($window, $q){
+
+/**
+ * Specify a function to call when bottom is not far...
+ * @param  {window} $window : the scroll action is triggered in the window object
+ * @return {function}       : parses and calls the function attached
+ */
+function scrollCall($window){
 
 	return {
 		link: function(scope, element, attrs) {
-			var offset, scrolling;
-			offset = parseInt(attrs.offset, 10) || 10;
-			scrolling = false;
-			return angular.element($window).bind('scroll', function() {
+			var offset = parseInt(attrs.offset, 10) || 10; // haw far from bottom it is supposed to call the function (px)
+			return angular.element($window).bind('scroll', function() {	
 				if ((this.innerHeight + this.scrollY) >= document.body.offsetHeight) {
 					scope.$apply(attrs.scrollCall);
 				}
@@ -26,6 +35,11 @@ function scrollCall($window, $q){
 	};
 }
 
+
+/**
+ * Different header size whether you scroll up or down
+ * @param  {window} $window : the scroll action is triggered in the window object
+ */
 function scrollOnMenu($window){
 
 	return {
@@ -33,22 +47,25 @@ function scrollOnMenu($window){
 		link:function(scope, element, attrs){
 			// console.log(element.find('.menu-item'));
 			var a = $window.pageYOffset;
-			var menu_items = document.getElementsByClassName("menu-item");
+			// var menu_items = document.getElementsByClassName("menu-item");
+			var logo = document.getElementById("logo-header");
 
 			$window.addEventListener("scroll", function(e) {
                	up_direction = window.pageYOffset < a || window.pageYOffset <= 0;
             	var i;
 				if(up_direction){
-					element[0].style.padding = "45px 30px";
+					element[0].style.padding = "30px 30px";
+					// logo.style.padding = "0";
                  
                 } else{
-					element[0].style.padding = "10px 30px";
+					element[0].style.padding = "15px 30px";
+					// logo.style.padding = "20px";
                 }
                 a = window.pageYOffset;
 
 			});
 		}
-	}
+	};
 }
 
 

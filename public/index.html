@@ -9,8 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <base href="/">
+    
+    <link href="http://fonts.googleapis.com/css?family=Raleway:700,100,400" rel="stylesheet" type="text/css">
 
     <!-- Style CSS -->
+    <link rel="stylesheet" href="css/z-grid.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -23,12 +26,19 @@
     </span>
     <header id="header" ng-controller="HeaderController as header" toggle-menu>
         
-        <div id="logo-header">
-            <img src="img/logo.svg" class="svg">
-        </div>
+        
         <nav>
+            <!--
+            <div id="logo-header">
+                <img src="img/logo.svg" class="svg">
+            </div> 
+            -->
             <ul>
-                <!-- <li><img src="img/menu_button.svg" alt="banniere" id="imgmenu" height=25px></li> -->   
+                <li id="logo-header">
+                    <a href=".">
+                        <img src="img/logo.svg" alt="banniere">
+                    </a>
+                </li>   
                 <li class="menu-item" ng-class="{'menu-active' :  header.route.current.currentTab == 'news'}">
                     <a href="/news" scroll-on-menu>Actualidad</a>
                 </li> 
