@@ -1,39 +1,46 @@
-function HeaderController($route){
+module.exports = {
 
-	this.route = $route;
-}
+	HeaderController: function($route){
+		'use strict';
 
-function AssociationController(Articles){
+		this.route = $route;
+	},
 
-	var self = this,
-		loading = false;
+	AssociationController: function(Articles){
+		'use strict';
 
-	self.articles = [];
-	self.currentpage = 0;
+		var self = this,
+			loading = false;
 
-	self.getArticles = function(){
-		if(loading === false){
-			loading = true;
-			Articles.getpage(self.currentpage).then(function(data){
-				if(data.length > 0){
-					for(var i=0; i<data.length; i++){
-			    		self.articles.push(data[i]);
+		self.articles = [];
+		self.currentpage = 0;
+
+		self.getArticles = function(){
+			if(loading === false){
+				loading = true;
+				Articles.getpage(self.currentpage).then(function(data){
+					if(data.length > 0){
+						for(var i=0; i<data.length; i++){
+							self.articles.push(data[i]);
+						}
+						self.currentpage++;
 					}
-			    	self.currentpage++;
-				}
-				
-		    	loading = false;
-		    	// console.log(self.currentpage);
-			});
-		}
-	};
-	self.getArticles();
-}
+					else{
+						alert("no more articles :)");
+					}
+					loading = false;
+				});
+			}
+		};
+		self.getArticles();
+	},
 
-function ImagesController(Articles){
+	ImagesController: function(Articles){
+		'use strict';
 
-	var self = this;
-	Articles.get().then(function(data){
-		self.articles = data;
-	});
-}
+		var self = this;
+		Articles.get().then(function(data){
+			self.articles = data;
+		});
+	}
+};
