@@ -13,16 +13,15 @@
 
 	angular.module('mainApp', ['ngRoute'])
 
-		.config(['$routeProvider', '$locationProvider', ConfigRoute])
+	.config(['$routeProvider', '$locationProvider', ConfigRoute])
 
-		.factory('Articles', ['$http', Articles])
+	.factory('Articles', ['$http', Articles])
 
-		.directive('toggleMenu', Directives.toggleMenu)
-		.directive('scrollCall', Directives.scrollCall)
-		.directive('scrollOnMenu', Directives.scrollOnMenu)
+	.directive('toggleMenu', Directives.toggleMenu)
+	.directive('scrollCall', Directives.scrollCall)
+	.directive('scrollOnMenu', Directives.scrollOnMenu)
 
-		.controller('HeaderController', ['$route', Controllers.HeaderController])
-		.controller('AssociationController', ['Articles', Controllers.AssociationController])
-		.controller('ImagesController', ['Articles', Controllers.ImagesController]);
-
+	.controller('HeaderController', ['$route', Controllers.HeaderController])
+	.controller('AssociationController', ['Articles', Controllers.AssociationController])
+	.controller('ImagesController', ['Articles', Controllers.ImagesController]);
 })();

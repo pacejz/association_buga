@@ -9,8 +9,8 @@ module.exports = {
 	AssociationController: function(Articles){
 		'use strict';
 
-		var me = this
-			,loading = false;
+		var me = this,
+			loading = false;
 
 		me.articles = [];
 		me.currentpage = 0;
@@ -21,16 +21,16 @@ module.exports = {
 				Articles.getpage(me.currentpage).then(function(data){
 					if(data.length > 0){
 						for(var i=0; i<data.length; i++){
-				    		me.articles.push(data[i]);
+							me.articles.push(data[i]);
 						}
-				    	me.currentpage++;
+						me.currentpage++;
 					}
 					else{
-						alert("no more articles :)")
+						alert("no more articles :)");
 					}
-			    	loading = false;
-			    	console.log(me.currentpage)
-				})
+					loading = false;
+					console.log(me.currentpage);
+				});
 			}
 		};
 		me.getArticles();
@@ -42,6 +42,6 @@ module.exports = {
 		var me = this;
 		Articles.get().then(function(data){
 			me.articles = data;
-		})
+		});
 	}
-}
+};

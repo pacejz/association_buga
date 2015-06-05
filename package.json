@@ -20,6 +20,7 @@
     "express": "^4.12.3",
     "grunt": "*",
     "grunt-browserify": "^3.8.0",
+    "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-watch": "^0.6.1"
   }
 }
