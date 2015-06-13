@@ -3,10 +3,10 @@
 	<h1>Imagenes</h1>
 	
 	<div class="z-grid">
-		<div class="z-3" ng-repeat="image in images.articles.articlesData">
+		<div class="z-3" ng-repeat="image in images.images.imagesData">
 			<div class="z-box multimedia_image">
 
-				<img src="{{image.image}}" alt="oups">
+				<a href=".{{image.min}}" class="z-photobox"><img src="{{image.min}}" alt="oups"></a>
 				<p>{{image.title}}</p>
 
 			</div>

@@ -25,9 +25,7 @@ module.exports = {
 						}
 						self.currentpage++;
 					}
-					else{
-						alert("no more articles :)");
-					}
+					
 					loading = false;
 				});
 			}
@@ -35,12 +33,13 @@ module.exports = {
 		self.getArticles();
 	},
 
-	ImagesController: function(Articles){
+	ImagesController: function(Images){
 		'use strict';
 
 		var self = this;
-		Articles.get().then(function(data){
-			self.articles = data;
+		Images.get().then(function(data){
+			self.images = data;
 		});
+		
 	}
 };

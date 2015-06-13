@@ -10,6 +10,8 @@
 	var Directives = require('./directives/directives');
 	var ConfigRoute = require('./routes/config');
 	var Articles = require('./services/articles');
+	var Images = require('./services/images');
+
 	var Controllers = require('./controllers/controllers');
 
 	angular.module('mainApp', ['ngRoute'])
@@ -17,17 +19,19 @@
 	.config(['$routeProvider', '$locationProvider', ConfigRoute])
 
 	.factory('Articles', ['$http', Articles])
+	.factory('Images', ['$http', Images])
 
 	.directive('toggleMenu', Directives.toggleMenu)
 	.directive('scrollCall', Directives.scrollCall)
 	.directive('scrollOnMenu', Directives.scrollOnMenu)
+	.directive('zPhotobox', Directives.zPhotobox)
 
 	.controller('HeaderController', ['$route', Controllers.HeaderController])
 	.controller('AssociationController', ['Articles', Controllers.AssociationController])
-	.controller('ImagesController', ['Articles', Controllers.ImagesController]);
+	.controller('ImagesController', ['Images', Controllers.ImagesController]);
 })();
 
-},{"./controllers/controllers":2,"./directives/directives":3,"./routes/config":4,"./services/articles":5}],2:[function(require,module,exports){
+},{"./controllers/controllers":2,"./directives/directives":3,"./routes/config":4,"./services/articles":5,"./services/images":6}],2:[function(require,module,exports){
 module.exports = {
 
 	HeaderController: function($route){
@@ -55,9 +59,7 @@ module.exports = {
 						}
 						self.currentpage++;
 					}
-					else{
-						alert("no more articles :)");
-					}
+					
 					loading = false;
 				});
 			}
@@ -65,13 +67,14 @@ module.exports = {
 		self.getArticles();
 	},
 
-	ImagesController: function(Articles){
+	ImagesController: function(Images){
 		'use strict';
 
 		var self = this;
-		Articles.get().then(function(data){
-			self.articles = data;
+		Images.get().then(function(data){
+			self.images = data;
 		});
+		
 	}
 };
 
@@ -147,6 +150,20 @@ module.exports = {
 				});
 			}
 		};
+	},
+
+	/*
+	*/
+	zPhotobox: function(){
+			'use strict';
+
+		return {
+			restrict: 'C',
+			link:function(scope,element,attrs){
+				zPhotobox.load([".z-photobox"]);				
+			}
+
+		};
 	}
 
 };
@@ -169,8 +186,6 @@ module.exports = function ($routeProvider, $locationProvider){
 	})
 	.when('/association', {
 		templateUrl: 'partials/association.html?1',
-			// controller: 'AssociationController',
-			// controllerAs: 'association',
 			currentTab: 'association'
 		})
 	.when('/association/history',{
@@ -251,4 +266,20 @@ module.exports = function ($http){
     };
 };
 
+},{}],6:[function(require,module,exports){
+module.exports = function($http){
+	'use strict';
+	return {
+        get: function(){
+            return $http.get('/api/images').then(function(res){
+                return res.data;
+            });
+        },
+        getpage: function(which){
+            return $http.get('/api/images/' + which).then(function(res){
+                return res.data.articlesData;
+            });
+        }
+    };
+};
 },{}]},{},[1]);

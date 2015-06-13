@@ -1,0 +1,95 @@
+{
+    "imagesData": [
+
+        {
+            "id": 1,
+            "authorName": "Admin",
+            "title": "Agricultura",
+            "min": "/img/site/agricultura_min.jpg",
+            "full": "/img/site/agricultura_min.jpg",
+            "event":"Agricultura",
+            "place": "Buga",
+            "date": "15/12/2015"
+        },
+         {
+            "id": 2,
+            "authorName": "Admin",
+            "title": "Agricultura 2",
+            "min": "/img/site/agricultura_2_min.jpg",
+            "full": "/img/site/agricultura_2_min.jpg",
+            "event":"Agricultura",
+            "place": "Buga",
+            "date": "15/12/2015"
+        },
+         {
+            "id": 3,
+            "authorName": "Admin",
+            "title": "Carpinteria",
+            "min": "/img/site/carpinteria_min.jpg",
+            "full": "/img/site/carpinteria_min.jpg",
+            "event":"Agricultura",
+            "place": "Buga",
+            "date": "15/12/2015"
+        },
+         {
+            "id": 4,
+            "authorName": "Admin",
+            "title": "Reciclaje",
+            "min": "/img/site/reciclaje_min.jpg",
+            "full": "/img/site/reciclaje_min.jpg",
+            "event":"Agricultura",
+            "place": "Buga",
+            "date": "15/12/2015"
+        },
+         {
+            "id": 5,
+            "authorName": "Admin",
+            "title": "Educacion",
+            "min": "/img/site/educacion_min.jpg",
+            "full": "/img/site/educacion_min.jpg",
+            "event":"Agricultura",
+            "place": "Buga",
+            "date": "15/12/2015"
+        },
+         {
+            "id": 6,
+            "authorName": "Admin",
+            "title": "Salud",
+            "min": "/img/site/salud_min.jpg",
+            "full": "/img/site/salud_min.jpg",
+            "event":"Agricultura",
+            "place": "Buga",
+            "date": "15/12/2015"
+        },
+         {
+            "id": 7,
+            "authorName": "Admin",
+            "title": "Evento 1",
+            "min": "/img/articles/evento_1_min.jpg",
+            "full": "/img/articles/evento_1_min.jpg",
+            "event":"Agricultura",
+            "place": "Buga",
+            "date": "15/12/2015"
+        },
+         {
+            "id": 8,
+            "authorName": "Admin",
+            "title": "Evento 2",
+            "min": "/img/articles/evento_2_min.jpg",
+            "full": "/img/articles/evento_2_min.jpg",
+            "event":"Agricultura",
+            "place": "Buga",
+            "date": "15/12/2015"
+        },
+         {
+            "id": 9,
+            "authorName": "Admin",
+            "title": "Evento 1",
+            "min": "/img/articles/evento_3_min.jpg",
+            "full": "/img/articles/evento_3_min.jpg",
+            "event":"Agricultura",
+            "place": "Buga",
+            "date": "15/12/2015"
+        }
+    ]
+}

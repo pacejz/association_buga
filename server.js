@@ -8,6 +8,7 @@ var express = require('express');
 
 var app = express();
 app.use(express.static(__dirname + '/public/'));
+app.use('/img',express.static(__dirname + '/img/'));
 
 
 //==========================Les routes============================//
@@ -49,6 +50,15 @@ app.get('/api/articles', function(req, res){
 	res.json(contentSend);
 });
 
+//get images
+app.get('/api/images', function(req, res){
+	
+	var filepath = __dirname + '/server/images.json',
+		content  = JSON.parse(fs.readFileSync(filepath,'utf8')), //get the data
+		contentSend = content;
+	res.json(contentSend);
+});
+
 // articles per pages ... 
 app.get('/api/articles/:page', function(req, res){
 	
@@ -64,12 +74,11 @@ app.get('/api/articles/:page', function(req, res){
 
 
 
-
-app.get('api/images', function(req, res){
-	var content, index, data
-		filepath = __dirname + '/server/data.json',
-		content  = JSON.parse(fs.readFileSync(filepath,'utf8'));
-})
+// app.get('api/images', function(req, res){
+// 	var content, index, data
+// 		filepath = __dirname + '/server/data.json',
+// 		content  = JSON.parse(fs.readFileSync(filepath,'utf8'));
+// })
 
 
 

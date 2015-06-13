@@ -69,6 +69,20 @@ module.exports = {
 				});
 			}
 		};
+	},
+
+	/*
+	*/
+	zPhotobox: function(){
+			'use strict';
+
+		return {
+			restrict: 'C',
+			link:function(scope,element,attrs){
+				zPhotobox.load([".z-photobox"]);				
+			}
+
+		};
 	}
 
 };
