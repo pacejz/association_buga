@@ -31,6 +31,7 @@ hr.separator{
 
 p {
     text-align: justify;
+    margin: 15px 15px 15px 15px;
 }
 
 a{
@@ -38,9 +39,28 @@ a{
     text-decoration:none;
 }
 
+li{
+    list-style-type: none;
+}
+
+.content{
+    max-width: 900px;
+    margin:auto;
+}
 
 
+.image_static{
+        overflow:hidden;
 
+    max-width: 700px;
+    max-height: 400px;
+    margin: 20px 15px 20px 15px;
+}
+
+.image_static img{
+    max-width:100%;
+    height:auto;
+}
 /** 
  * HEADER
  */
@@ -339,6 +359,18 @@ footer #footer-content {
         position:relative;
         display:block;
     }
+
+    .content{
+    /*max-width: 900px;*/
+    margin:0;
+    }
+    .image_static{
+        overflow:hidden;
+
+    max-width: 700px;
+    max-height: 400px;
+    margin: 10px 0 10px 0;
+}
     header nav ul:before{
         /*content:"MENU";*/
         display:block;
